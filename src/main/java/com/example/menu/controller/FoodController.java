@@ -10,5 +10,6 @@ public class FoodController {
     @GetMapping
     public void getAll() {
 
+        Food food
     }
 }
