@@ -20,7 +20,7 @@ public class FoodController {
     @GetMapping
     public List<FoodResponseDTO> getAll() {
 
-        List<Food> foodList = repository.findAll();
+        List<Food> foodList = repository.findAll().stream().map(FoodResponseDTO::new);
         return foodList;
     }
 }
